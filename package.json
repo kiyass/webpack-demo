@@ -1,0 +1,71 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "pravite": true,
+  "scripts": {
+    "start": "webpack-dev-server --open --config config/webpack.dev.js",
+    "build": "webpack --env.production --config config/webpack.prod.js",
+    "build:dll": "webpack --config config/webpack.dll.js",
+    "build:report": "npm run build & webpack-bundle-analyzer --port 8123 dist/stats.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.10.4",
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.4.0",
+    "cz-conventional-changelog": "^3.2.0",
+    "extract-loader": "^3.1.0",
+    "file-loader": "^5.0.2",
+    "glob": "^7.1.6",
+    "html-loader": "^0.5.5",
+    "html-webpack-externals-plugin": "^3.8.0",
+    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-tags-plugin": "^2.0.17",
+    "husky": "^4.2.5",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "lodash": "^4.17.15",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "raw-loader": "^4.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "style-loader": "^1.1.2",
+    "terser-webpack-plugin": "^2.3.1",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.5",
+    "webpack-bundle-analyzer": "^3.6.1",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1",
+    "webpack-merge": "^4.2.2"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.11.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  }
+}

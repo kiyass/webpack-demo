@@ -1,0 +1,17 @@
+*.iml
+.idea/
+.ipr
+.iws
+*~
+~*
+.DS_Store
+Thumbs.db
+.svn/
+log/
+*.log
+*.log.*
+node_modules/
+dist
+dist.zip
+dist.tar
+/.vscode/
